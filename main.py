@@ -6,6 +6,9 @@ from routers.my_module import router1,router2,router3,router4,router5
 
 app=FastAPI()
 
+@app.get("/")
+def read_root():
+    return {"message": "Hola Mundo"}
 
 app.include_router(router1)
 app.include_router(router2)
