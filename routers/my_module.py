@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
-from api_functions import developer, userdata, userForGenre, best_developer_year#, developer_reviews_analysis
+from api_functions import developer, userdata, UserForGenre, best_developer_year, developer_reviews_analysis
 
 router1 = APIRouter()
 router2 = APIRouter()
@@ -20,7 +20,7 @@ def read_userdata(user_id: str):
 
 @router3.get("/UserForGenre/{genero}")
 def read_user_for_genre(genero: str):
-    result = userForGenre(genero)
+    result = UserForGenre(genero)
     return JSONResponse(content=result)
 
 @router4.get("/best_developer_year/{year}")
