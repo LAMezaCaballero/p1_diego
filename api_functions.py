@@ -53,7 +53,7 @@ def userdata(user_id: str):
   return result
 
 
-def UserForGenre(genero: str):
+def userForGenre(genero: str):
 
   df_gen=df_gitems[df_gitems["genres"]==genero][["user_id","hours_game","year"]]
 
