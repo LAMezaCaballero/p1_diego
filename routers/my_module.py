@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
-from api_functions import developer, userdata, userForGenre, best_developer_year, developer_reviews_analysis
+from api_functions import developer, userdata, userForGenre, best_developer_year#, developer_reviews_analysis
 
 router1 = APIRouter()
 router2 = APIRouter()
