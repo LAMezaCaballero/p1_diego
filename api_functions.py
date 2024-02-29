@@ -11,11 +11,11 @@ df_greviews=pd.read_parquet(r"./Data/g_reviews2.parquet")
 #unir los datos de  gitems_cleaned porque no cabian todos
 
 p1=pd.read_parquet(r"./Data/gitems_cleaned1.parquet")
-p2=pd.read_parquet(r"./Data/gitems_cleaned2.parquet")
-p3=pd.read_parquet(r"./Data/gitems_cleaned3.parquet")
-p4=pd.read_parquet(r"./Data/gitems_cleaned4.parquet")
-p5=pd.read_parquet(r"./Data/gitems_cleaned5.parquet")
-df_gitems= pd.concat([p1,p2,p3,p4,p5], ignore_index= True)
+#p2=pd.read_parquet(r"./Data/gitems_cleaned2.parquet")
+#p3=pd.read_parquet(r"./Data/gitems_cleaned3.parquet")
+#p4=pd.read_parquet(r"./Data/gitems_cleaned4.parquet")
+#p5=pd.read_parquet(r"./Data/gitems_cleaned5.parquet")
+df_gitems= p1 #pd.concat([p1,p2,p3,p4,p5], ignore_index= True)
 #restablecer los índices del DataFrame resultante
 df_gitems.reset_index(drop=True, inplace=True)
 
