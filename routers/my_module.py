@@ -20,7 +20,7 @@ def read_userdata(user_id: str):
 
 @router3.get("/UserForGenre/{genero}")
 def read_user_for_genre(genero: str):
-    result = UserForGenre(genero)
+    result = userForGenre(genero)
     return JSONResponse(content=result)
 
 @router4.get("/best_developer_year/{year}")
